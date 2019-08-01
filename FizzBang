@@ -1,0 +1,23 @@
+    int numbers = 1;
+    do
+    {
+        if (numbers % 15 == 0)
+        {
+            cout << numbers << " fizzbang" << endl;
+        }
+        else if (numbers % 3 == 0)
+        {
+            cout << numbers << " fizz" << endl;
+        }
+        else if (numbers % 5 == 0)
+        {
+            cout << numbers << " bang" << endl;
+        }
+        else
+        {
+            cout << numbers << endl;
+        }
+        numbers++;
+
+    }
+    while (numbers <= 100);
