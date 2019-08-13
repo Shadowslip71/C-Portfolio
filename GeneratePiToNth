@@ -8,12 +8,20 @@
 
 int main()
 {
-    double PI = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;
+    long double PI = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679;
     int decimalPlaces;
-    std::cout << "How many decimal places?" << std::endl;
+    
+    std::cout << "How many decimal places (max 100)?" << std::endl;
     std::cin>> decimalPlaces;
-
-    std::cout << "PI to " << decimalPlaces << " is " << std::setprecision(decimalPlaces+1) << PI << std::endl;
-
+    
+    if (decimalPlaces <=100)
+    {
+        std::cout << "PI to " << decimalPlaces << " is " << std::setprecision(decimalPlaces) << PI << std::endl;
+    }
+    else
+    {
+        std::cout <<"Too high." << std::endl;
+    }
+    
     return 0;
 }
