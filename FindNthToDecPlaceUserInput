@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+
+/**
+ * Finding the nth decimal place out of 100
+ * Including validity checks on the input
+ * by G Cheadle
+ */     
+
+int main()
+
+{
+
+    double e = 2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274;
+    int decimalPlace;
+
+    std::cout<<"Enter the number of decimal places."<<std::endl;
+    std::cin>>decimalPlace;
+
+
+    if (decimalPlace < 1 || decimalPlace > 100 || std::cin.fail())
+    {
+        std::cout<<"Incorrect input"<<std::endl;
+    }
+    else
+    {
+        decimalPlace+=1;
+        std::cout << std::setprecision(decimalPlace)<<e<<std::endl;
+    }
+
+    return 0;
+
+}
