@@ -1,0 +1,35 @@
+#include <iostream>
+
+/**
+*This checks for a valid input
+*then outputs the Fibonacci sequence
+*that is no higher than the input
+*/
+
+int main()
+{
+    int a = 0, b = 1, c, temp, userNum;
+
+    std::cout<<"Input a positive number"<<std::endl;
+    std::cin>>userNum;
+
+    if(userNum < 1 || std::cin.fail())
+    {
+        std::cout<<"Input outside permitted range or wrong type."<<std::endl;
+    }
+    else
+    {
+        for(int i = 0; i < userNum; i++)
+        {
+            if (a < userNum)
+            {
+                std::cout<<a<<" ";
+                c = a + b;
+                temp = c;
+                a = b;
+                b = temp;
+            }
+        }
+    }
+    return 0;
+}
