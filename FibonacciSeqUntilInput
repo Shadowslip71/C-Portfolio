@@ -21,7 +21,7 @@ int main()
     {
         for(int i = 0; i < userNum; i++)
         {
-            if (a < userNum)
+            if (a <= userNum)
             {
                 std::cout<<a<<" ";
                 c = a + b;
