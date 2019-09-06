@@ -8,7 +8,7 @@
 
 int main()
 {
-    int a = 0, b = 1, c, temp, userNum;
+    int a = 0, b = 1, c, userNum;
 
     std::cout<<"Input a positive number"<<std::endl;
     std::cin>>userNum;
@@ -25,9 +25,8 @@ int main()
             {
                 std::cout<<a<<" ";
                 c = a + b;
-                temp = c;
                 a = b;
-                b = temp;
+                b = c;
             }
         }
     }
